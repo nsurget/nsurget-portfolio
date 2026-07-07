@@ -5,7 +5,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 
 - **Localisation :** 63170 AUBIERE
 - **GitHub :** [nsurget](https://github.com/nsurget)
-- **LinkedIn :** [Nicolas SURGET](https://www.linkedin.com/in/nicolas-surget)
+- **LinkedIn :** [Nicolas SURGET](https://www.linkedin.com/in/nicolas-surget-94435b281/)
 - **Permis :** Permis B avec véhicule personnel
 
 ---

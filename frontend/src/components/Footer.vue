@@ -13,7 +13,7 @@
       <!-- Links -->
       <div class="flex gap-stack-md font-label-caps text-label-caps text-on-surface-variant">
         <a class="hover:text-primary transition-colors duration-300" href="https://github.com/nsurget" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="hover:text-primary transition-colors duration-300" href="https://www.linkedin.com/in/nicolas-surget" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="hover:text-primary transition-colors duration-300" href="https://www.linkedin.com/in/nicolas-surget-94435b281/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
