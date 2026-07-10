@@ -72,10 +72,25 @@ const categoryTags = computed(() => {
 });
 
 const technologyTags = computed(() => {
-  return tags.value.filter(tag => 
+  const list = tags.value.filter(tag => 
     !categoryTagNames.includes(tag.name.toLowerCase()) && 
     tag.Projects && tag.Projects.length > 0
   );
+
+  const pinned = ['javascript', 'react', 'php', 'vue.js', 'woocommerce'];
+
+  return [...list].sort((a, b) => {
+    const aName = a.name.toLowerCase();
+    const bName = b.name.toLowerCase();
+    const aIdx = pinned.indexOf(aName);
+    const bIdx = pinned.indexOf(bName);
+
+    if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx;
+    if (aIdx !== -1) return -1;
+    if (bIdx !== -1) return 1;
+
+    return aName.localeCompare(bName);
+  });
 });
 
 const showAllTechTags = ref(false);

@@ -87,7 +87,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 
 #### [ID: PROJ-GEN-PLUGIN] Générateur de base de plugin
 - **Description :** Création d’un outil interne en JavaScript pour automatiser le renommage et la génération de structures de plugins sur mesure dans une trentaine de fichiers. Permet de sécuriser le lancement d'un projet et de réduire le temps de configuration initial (gain de 15 minutes par projet) tout en simplifiant la prise en main pour les nouveaux développeurs.
-- **Tags :** Pro, JavaScript, Node.js, Automatisation
+- **Tags :** Pro, JavaScript, Node.js, Optimisation
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-GEN-LEGAL] Générateur de mentions légales
@@ -109,25 +109,25 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 
 #### [ID: PROJ-HOKALO] H'okalo
 - **Description :** Site e-commerce haut de gamme de vente de café de spécialité produit par une entreprise adaptée. Souci du détail très poussé, interfaces animées et design soigné pour mettre en valeur le produit et optimiser la conversion (sortie prévue début août 2026).
-- **Tags :** Pro, PHP, WooCommerce, WordPress, Front-end, Animations, Claude Code
+- **Tags :** Pro, PHP, WooCommerce, WordPress, Front-end, Animations CSS, Claude Code
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-GLOBALU] Globalu
 - **Description :** Assistance technique et revue de code sur des points bloquants (optimisation des performances et conflits Cloudflare/AJAX). Conception et intégration d'une visionneuse 3D interactive pour les produits via la bibliothèque Google `<model-viewer>`. Génération et texturage des fichiers 3D (.glb) en convertissant des modèles existants via l'extrusion de fichiers vectoriels SVG (technique issue de ma formation BTS CPI).
 - **Lien :** [globalu.fr](https://globalu.fr)
-- **Tags :** Pro, JavaScript, 3D Rendering, Model-Viewer, SVG, AJAX
+- **Tags :** Pro, JavaScript, 3D Rendering, Model-Viewer, SVG, AJAX, Intégration 3D
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-MASTER-GLOQUAL] Master Gloqual
 - **Description :** Interface ergonomique de gestion des candidatures d'inscription pour le Master de l'UCA. Gestion d'états d'inscription (nationale/internationale), accès sécurisé avec affichage différencié selon les rôles (enseignants/administratif). Respect des normes d'accessibilité RGAA et travail collaboratif sous Git.
 - **Lien :** [mastergloqual.com](https://mastergloqual.com)
-- **Tags :** Pro, PHP, WordPress, Accessibilité, RGAA, Git, Sécurité, Antigravity / Gemini
+- **Tags :** Pro, PHP, WordPress, Accessibilité Web / RGAA, Git, Sécurité, Antigravity / Gemini
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-AUREP] Aurep
 - **Description :** Reprise de projet et développement d'un nouveau tunnel de commande spécifique connecté à l'API du CRM Dendreo avec webhooks. Création d'une plateforme de formation e-learning avec vidéos à visionnage obligatoire, module d'évaluation (quiz builder avec calcul de score), formulaires de satisfaction synchronisés avec le CRM et génération automatique d'attestations.
 - **Lien :** [aurep.com](https://aurep.com)
-- **Tags :** Pro, PHP, WordPress, API, Webhooks, CRM, Dendreo, Antigravity / Gemini
+- **Tags :** Pro, PHP, WordPress, API, ERP/CRM, Dendreo, Antigravity / Gemini, AJAX, JavaScript, Git
 - **Lié à l'expérience :** COQPIT
 
 ### Academic Projects (OpenClassrooms)
@@ -136,19 +136,19 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 - **Description :** SaaS de gestion de projet pour freelances développé en Next.js (App Router). Tableau de bord visuel de progression des tâches avec priorisation et affectation. Intègre un module d'IA (Gemini API) en local pour découper des objectifs en sous-tâches. Authentification sécurisée via proxy Next.js.
 - **GitHub :** [dev-abricot-front-p7](https://github.com/nsurget/dev-abricot-front-p7)
 - **Lien :** [dev-abricot-front-p7.app](https://dev-abricot-front-p7.vercel.app)
-- **Tags :** Formation, Next.js, React, TypeScript, Tailwind CSS, Zustand, Gemini API, SaaS, OpenClassrooms
+- **Tags :** Formation, React, Next.js, TypeScript, JavaScript, Tailwind CSS, Zustand, Front-end, SVG, AJAX, Node.js, Express, API, JWT, SQLite, Architecture MVC, Sécurité, Gemini API, Antigravity / Gemini, Optimisation, SaaS, OpenClassrooms, Git, Accessibilité Web / RGAA
 - **Lié à la formation :** EDU-OC-FS
 
 #### [ID: PROJ-KASA] Kasa
 - **Description :** Plateforme de location immobilière entre particuliers avec Next.js. Espace client (recherche, favoris, avis) et espace propriétaire (gestion d'annonces, upload d'images avec Multer). API REST sécurisée via Express, authentification JWT/Cookies et tests unitaires avec Vitest.
 - **GitHub :** [dev-kasa-front-p8](https://github.com/nsurget/dev-kasa-front-p8)
-- **Tags :** Formation, Next.js, React, TypeScript, Express, SQLite, JWT, Vitest, OpenClassrooms
+- **Tags :** Formation, React, Next.js, TypeScript, Tailwind CSS, Zustand, Front-end, Node.js, Express, SQLite, JWT, API, Vitest, Git, Sécurité, JavaScript, Antigravity / Gemini, OpenClassrooms
 - **Lié à la formation :** EDU-OC-FS
 
 #### [ID: PROJ-SPORTSEE] SportSee
 - **Description :** Dashboard de suivi d'activité physique en React. Visualisation de données d'activité et de performance (Recharts), architecture découplée avec le pattern Adapter pour la normalisation des données de l'API. Hook personnalisés pour le traitement des statistiques.
 - **GitHub :** [p6-react-sportsee](https://github.com/nsurget/p6-react-sportsee)
-- **Tags :** Formation, React, Recharts, React Router, Data Visualization, OpenClassrooms
+- **Tags :** Formation, React, Recharts, React Router, Data Visualization, OpenClassrooms, JavaScript, API
 - **Lié à la formation :** EDU-OC-FS
 
 #### [ID: PROJ-TOMTROC] TomTroc
@@ -162,7 +162,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 #### [ID: PROJ-NSURGET-FR] nsurget.fr
 - **Description :** Conception et développement de mon portfolio personnel et CV numérique. Utilisation d'une architecture découplée avec un chargement dynamique des données de formation, d'expériences et de loisirs depuis le fichier cv.md. Design soigné et moderne sous forme de Bento Grid, intégration de polices haut de gamme (Gugi, Geist, Inter) et animations fluides.
 - **GitHub :** [nsurget-portfolio](https://github.com/nsurget)
-- **Tags :** Perso, Vue.js, Express, SQLite, Sequelize, Tailwind CSS, Antigravity / Gemini
+- **Tags :** Perso, Vue.js, Express, SQLite, Sequelize, Tailwind CSS, Vite, Vue Router, Antigravity / Gemini, JavaScript, API
 
 ---
 
