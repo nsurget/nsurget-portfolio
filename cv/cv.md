@@ -12,37 +12,33 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 
 ## SKILLS & TECHNOLOGIES
 
-### Langages & Frameworks
-- PHP (Architecture MVC, POO)
-- JavaScript / TypeScript (React, Next.js)
-- Java (Spring Boot)
-- HTML5 / CSS3 (Tailwind CSS, Bootstrap, SCSS)
+### Compétences Techniques
+- Développement d’applications web (front-end / back-end)
+- Création de sites e-commerce
+- Développement et consommation d’API
+- Interconnexion de sites avec des ERP
+- Connaissance des méthodologies Agiles (Scrum)
+- Rédaction de cahiers des charges
 
-### CMS & E-commerce
-- WordPress
-- WooCommerce
-
-### Outils & Méthodologies
-- Gestion de projet : Méthodologies Agiles (Scrum), Rédaction de cahiers des charges
-- API & Data : Développement et consommation d’API, Interconnexion de sites avec des ERP / CRM, CRON Tasks
-- Design & Bureautique : Figma, Canva, Suite Google (Sheets, Docs, Apps Script, Forms)
-
-### Langues
-- Anglais : Niveau C1
+### Informatique
+- **Langages & frameworks :** PHP, JavaScript (React/Next.js), Java (Spring Boot), HTML5, CSS3
+- **CMS & e-commerce :** WordPress, WooCommerce
+- **Frameworks CSS :** Tailwind CSS, Bootstrap
+- **Outils & environnements :** Suite Google (Sheets, Docs, Apps Script, Forms), Scribe, Canva, Figma
 
 ---
 
 ## EDUCATION (FORMATIONS)
 
-### [ID: EDU-OC-FS] Formation Développeur Concepteur Logiciel (Full Stack React/PHP)
-- **Niveau :** Titre professionnel niveau 6 (Bac+3/4) | Numéro RNCP 38038
-- **Organisme :** OpenClassRooms - Clermont-Ferrand (2025)
+### [ID: EDU-OC-FS] Formation Développeur Concepteur Logiciel
+- **Niveau :** Titre professionnel niveau 6 (Bac+3/+4) | Numéro RNCP 38038
+- **Organisme :** OpenClassRooms - Paris / Clermont-Ferrand (2025)
 - **Tags associés :** React, JavaScript, PHP, Architecture MVC, API REST, Tailwind CSS
 - **Projets liés :** PROJ-KASA, PROJ-ABRICOT, PROJ-SPORTSEE, PROJ-TOMTROC
 
-### [ID: EDU-OC-WM] Formation Développeur Web et Web Mobile
+### [ID: EDU-HB-WM] Formation Développeur Web et Web Mobile
 - **Niveau :** Titre professionnel niveau 5 (Bac+2) | Numéro RNCP 37674
-- **Organisme :** OpenClassRooms - Clermont-Ferrand (2024)
+- **Organisme :** Human Booster - Clermont-Ferrand (2024)
 - **Tags associés :** HTML5, CSS3, JavaScript, Intégration Web
 
 ### [ID: EDU-HB-JAVA] Formation Développer JAVA POEC & Scrum Master
@@ -50,16 +46,20 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 - **Organisme :** Human Booster - Clermont-Ferrand (2023)
 - **Tags associés :** Java, Spring Boot, POO, Scrum, Agilité
 
-### [ID: EDU-SIGMA] Formation 4ème année d’école d'ingénieur
+### [ID: EDU-SIGMA] Formation d’école d'ingénieur
 - **Spécialité :** Mécanique
-- **Organisme :** SIGMA - Clermont-Ferrand (2022)
+- **Organisme :** SIGMA - Clermont-Ferrand (2017 - 2022)
 
 ### [ID: EDU-ATS] Classe Préparatoire ATS (Adaptation Technicien Supérieur)
-- **Organisme :** Lycée Pierre Mendes-France - Épinal (2017)
+- **Organisme :** Lycée Pierre Mendes-France - Épinal (2016 - 2017)
 
 ### [ID: EDU-BTS] BTS CPI - Conception de Produits Industriels
 - **Niveau :** Bac+2
 - **Organisme :** Lycée Henri Loritz - Nancy (2016)
+
+### [ID: EDU-BAC] Bac STI2D
+- **Spécialité :** Sciences et technologies de l'industrie et du développement durable (Mention Bien)
+- **Organisme :** Lycée Henri Loritz - Nancy (2014)
 
 ---
 
@@ -67,9 +67,9 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 
 ### Développeur Web (Alternance puis CDI)
 - **Entreprise :** COQPIT - Clermont-Ferrand (2024 - Présent)
-- **Missions :** Développement de sites internet vitrines et e-commerce. Intégration, maintenance et connexion automatisée de sites web avec des ERP et CRM tiers.
+- **Missions :** Développement de sites web dont e-commerce. Intégration et connexion avec des ERP.
 - **Tags associés :** PHP, WordPress, WooCommerce, API, CRM, ERP, CRON, JavaScript, Tailwind CSS
-- **Projets liés :** PROJ-ASHIKA, PROJ-COLIBRI
+- **Projets liés :** PROJ-GEN-PLUGIN, PROJ-GEN-LEGAL, PROJ-ERP-CONNECT, PROJ-ASHIKA, PROJ-HOKALO, PROJ-GLOBALU, PROJ-MASTER-GLOQUAL, PROJ-AUREP
 
 ### Concepteur Fabricant d'Éclairage Public (Stage)
 - **Entreprise :** ECLATEC - Maxéville (2018)
@@ -77,6 +77,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 
 ### Stage Technique (BTS CPI)
 - **Entreprise :** Feller Ascenseur - Nancy (2015)
+- **Mission :** Stage dans le cadre de première année de BTS CPI.
 
 ---
 
@@ -84,49 +85,91 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 
 ### Professional Projects (Coqpit)
 
-#### [ID: PROJ-ASHIKA] Ashika France
-- **Description :** Développement complet du front-end du site e-commerce et création d'un plugin sur mesure pour l'interconnexion avec le CRM du client. Gestion de la synchronisation automatisée (via tâches CRON) des stocks, des prix, de plus de 11 000 produits (pièces auto), des véhicules compatibles, des clients et des catégories de produits.
-- **Lien :** [ashika.fr](https://ashika.fr)
-- **Tags :** PHP, WooCommerce, WordPress, Custom Plugin, CRM, API, CRON, Synchronisation de données
+#### [ID: PROJ-GEN-PLUGIN] Générateur de base de plugin
+- **Description :** Création d’un outil interne en JavaScript pour automatiser le renommage et la génération de structures de plugins sur mesure dans une trentaine de fichiers. Permet de sécuriser le lancement d'un projet et de réduire le temps de configuration initial (gain de 15 minutes par projet) tout en simplifiant la prise en main pour les nouveaux développeurs.
+- **Tags :** Pro, JavaScript, Node.js, Automatisation, Outil interne
 - **Lié à l'expérience :** COQPIT
 
-#### [ID: PROJ-COLIBRI] Le Colibri Frenchy
-- **Description :** Développement du site e-commerce et intégration de fonctionnalités sur mesure adaptées aux besoins spécifiques des clients sur la plateforme.
-- **Lien :** [lecolibrifrenchy.fr](https://lecolibrifrenchy.fr)
-- **Tags :** PHP, WooCommerce, WordPress, Front-end Development, Custom Features
+#### [ID: PROJ-GEN-LEGAL] Générateur de mentions légales
+- **Description :** Outil interne de génération de mentions légales avec des templates adaptés et validés légalement, permettant de mettre à jour de façon rapide les éléments répétitifs et d'optimiser le démarrage des projets pour l'ensemble de l'équipe de développement.
+- **Tags :** Pro, JavaScript, Outil interne, Optimisation
+- **Lié à l'expérience :** COQPIT
+
+#### [ID: PROJ-ERP-CONNECT] Detercentre Cleor & Sites Connectés
+- **Description :** Connexion custom de trois sites e-commerce sur des ERP sur mesure existants via API. Optimisation d'un CRON serveur et de la synchronisation de plus de 3500 produits avec des grilles de prix complexes par utilisateur (table multirelationnelle). Optimisation des performances et création d'un système de pré-panier soumis à la validation d'un compte parent (commandes enfants validées par la maison mère).
+- **Lien :** [detercentre-cleor.com](https://detercentre-cleor.com)
+- **Tags :** Pro, PHP, WooCommerce, WordPress, API, CRON, B2B, ERP
+- **Lié à l'expérience :** COQPIT
+
+#### [ID: PROJ-ASHIKA] Ashika France
+- **Description :** Reprise d'un site e-commerce en l'état pour maintenance et optimisation avant refonte complète sur-mesure connectée via des fichiers d'export CSV de l'ERP Divalto. Architecture conçue pour anticiper un futur passage vers des services web (API) pour la gestion de plus de 11 000 pièces automobiles.
+- **Lien :** [ashika.fr](https://ashika.fr)
+- **Tags :** Pro, PHP, WooCommerce, WordPress, ERP, CSV, Synchronisation de données, Claude Code, Antigravity / Gemini
+- **Lié à l'expérience :** COQPIT
+
+#### [ID: PROJ-HOKALO] H'okalo
+- **Description :** Site e-commerce haut de gamme de vente de café de spécialité produit par une entreprise adaptée. Souci du détail très poussé, interfaces animées et design soigné pour mettre en valeur le produit et optimiser la conversion (sortie prévue début août 2026).
+- **Tags :** Pro, PHP, WooCommerce, WordPress, Front-end, Animations, Claude Code
+- **Lié à l'expérience :** COQPIT
+
+#### [ID: PROJ-GLOBALU] Globalu
+- **Description :** Assistance technique et revue de code sur des points bloquants (optimisation des performances et conflits Cloudflare/AJAX). Conception et intégration d'une visionneuse 3D interactive pour les produits via la bibliothèque Google `<model-viewer>`. Génération et texturage des fichiers 3D (.glb) en convertissant des modèles existants via l'extrusion de fichiers vectoriels SVG (technique issue de ma formation BTS CPI).
+- **Lien :** [globalu.fr](https://globalu.fr)
+- **Tags :** Pro, JavaScript, 3D Rendering, Model-Viewer, SVG, Cloudflare, AJAX
+- **Lié à l'expérience :** COQPIT
+
+#### [ID: PROJ-MASTER-GLOQUAL] Master Gloqual
+- **Description :** Interface ergonomique de gestion des candidatures d'inscription pour le Master de l'UCA. Gestion d'états d'inscription (nationale/internationale), accès sécurisé avec affichage différencié selon les rôles (enseignants/administratif). Respect des normes d'accessibilité RGAA et travail collaboratif sous Git.
+- **Lien :** [mastergloqual.com](https://mastergloqual.com)
+- **Tags :** Pro, PHP, WordPress, Accessibilité, RGAA, Git, Sécurité, Antigravity / Gemini
+- **Lié à l'expérience :** COQPIT
+
+#### [ID: PROJ-AUREP] Aurep
+- **Description :** Reprise de projet et développement d'un nouveau tunnel de commande spécifique connecté à l'API du CRM Dendreo avec webhooks. Création d'une plateforme de formation e-learning avec vidéos à visionnage obligatoire, module d'évaluation (quiz builder avec calcul de score), formulaires de satisfaction synchronisés avec le CRM et génération automatique d'attestations.
+- **Lien :** [aurep.com](https://aurep.com)
+- **Tags :** Pro, PHP, WordPress, E-learning, API, Webhooks, CRM, Dendreo, Antigravity / Gemini
 - **Lié à l'expérience :** COQPIT
 
 ### Academic Projects (OpenClassrooms)
 
-#### [ID: PROJ-KASA] Kasa
-- **Description :** Application de location de logements développée en React (Projet 8 OpenClassrooms - En cours de développement).
-- **GitHub :** [dev-kasa-front-p8](https://github.com/nsurget/dev-kasa-front-p8)
-- **Tags :** React, JavaScript, Front-end, OpenClassrooms
+#### [ID: PROJ-ABRICOT] Abricot
+- **Description :** SaaS de gestion de projet pour freelances développé en Next.js (App Router). Tableau de bord visuel de progression des tâches avec priorisation et affectation. Intègre un module d'IA (Gemini API) en local pour découper des objectifs en sous-tâches. Authentification sécurisée via proxy Next.js.
+- **GitHub :** [dev-abricot-front-p7](https://github.com/nsurget/dev-abricot-front-p7)
+- **Lien :** [dev-abricot-front-p7.app](https://dev-abricot-front-p7.vercel.app)
+- **Tags :** Formation, Next.js, React, TypeScript, Tailwind CSS, Zustand, Gemini API, SaaS, OpenClassrooms
 - **Lié à la formation :** EDU-OC-FS
 
-#### [ID: PROJ-ABRICOT] Abricot
-- **Description :** Webapp de gestion de projet développée en React. Intégration de l'API Gemini pour des fonctionnalités d'IA (ex: autocomplétion de tâches). Projet axé sur le suivi de prompts et les bonnes pratiques d'utilisation des outils d'IA (Projet 7 OpenClassrooms).
-- **GitHub :** [dev-abricot-front-p7](https://github.com/nsurget/dev-abricot-front-p7)
-- **Tags :** React, JavaScript, API Gemini, Intelligence Artificielle, Prompt Engineering, OpenClassrooms
+#### [ID: PROJ-KASA] Kasa
+- **Description :** Plateforme de location immobilière entre particuliers avec Next.js. Espace client (recherche, favoris, avis) et espace propriétaire (gestion d'annonces, upload d'images avec Multer). API REST sécurisée via Express, authentification JWT/Cookies et tests unitaires avec Vitest.
+- **GitHub :** [dev-kasa-front-p8](https://github.com/nsurget/dev-kasa-front-p8)
+- **Tags :** Formation, Next.js, React, TypeScript, Express, SQLite, JWT, Vitest, OpenClassrooms
 - **Lié à la formation :** EDU-OC-FS
 
 #### [ID: PROJ-SPORTSEE] SportSee
-- **Description :** Application React dédiée au suivi des performances et données de sportifs (affichage de graphiques, BPM, calories, jours d'activité, etc.). Consommation d'API et gestion d'états (Projet 6 OpenClassrooms).
+- **Description :** Dashboard de suivi d'activité physique en React. Visualisation de données d'activité et de performance (Recharts), architecture découplée avec le pattern Adapter pour la normalisation des données de l'API. Hook personnalisés pour le traitement des statistiques.
 - **GitHub :** [p6-react-sportsee](https://github.com/nsurget/p6-react-sportsee)
-- **Tags :** React, JavaScript, Data Visualization, API Consumption, OpenClassrooms
+- **Tags :** Formation, React, Recharts, React Router, Custom Hooks, Data Visualization, OpenClassrooms
 - **Lié à la formation :** EDU-OC-FS
 
 #### [ID: PROJ-TOMTROC] TomTroc
-- **Description :** Plateforme de listing et d'échange de livres d'occasion développée en PHP (Projet 4 OpenClassrooms).
-- **Tags :** PHP, Architecture MVC, POO, MySQL, OpenClassrooms
+- **Description :** Ce projet a été réalisé dans le cadre du parcours Développeur Full stack d'OpenClassrooms (Projet 4). Il s'agit d'une application PHP développée en architecture MVC (Modèle-Vue-Contrôleur) sans framework, permettant aux utilisateurs d'échanger leurs livres d'occasion.
+- **GitHub :** [p4-oc-tomtroc](https://github.com/nsurget/p4-oc-tomtroc)
+- **Tags :** Formation, PHP, Architecture MVC, MySQL, OpenClassrooms
 - **Lié à la formation :** EDU-OC-FS
+
+### Personal Projects (Perso)
+
+#### [ID: PROJ-NSURGET-FR] nsurget.fr
+- **Description :** Conception et développement de mon portfolio personnel et CV numérique. Utilisation d'une architecture découplée avec un chargement dynamique des données de formation, d'expériences et de loisirs depuis le fichier cv.md. Design soigné et moderne sous forme de Bento Grid, intégration de polices haut de gamme (Gugi, Geist, Inter) et animations fluides.
+- **GitHub :** [nsurget-portfolio](https://github.com/nsurget)
+- **Tags :** Perso, Vue.js, Express, SQLite, Sequelize, Tailwind CSS, Gfont Gugi, Antigravity / Gemini
 
 ---
 
 ## SOFT SKILLS
-- **Esprit d'équipe & Collaboration :** Capacité à travailler en synergie avec des designers, des chefs de projet et des clients.
-- **Adaptabilité & Curiosité :** Apprentissage et prise en main rapides de nouveaux langages ou frameworks.
+- **Esprit d'équipe & Collaboration :** Capacité à travailler en synergie (avec des designers, des chefs de projet ou des clients).
 - **Résolution de problèmes & Ingéniosité :** Capacité à trouver des solutions techniques efficaces et logiques face aux blocages.
+- **Adaptabilité & Curiosité :** Apprentissage rapide de nouveaux languages ou frameworks.
 - **Empathie :** À l'écoute des retours et des attentes pour délivrer des solutions au plus proche des besoins réels.
 
 ---
@@ -137,4 +180,4 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 - **Sports :** Randonnée, Football, Ski Alpin.
 
 ---
-_Mise à jour : 03/07/2026_
+_Mise à jour : 10/07/2026_

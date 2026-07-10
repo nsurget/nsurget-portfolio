@@ -21,7 +21,7 @@ const toggleMobileMenu = () => {
   <nav class="fixed top-0 w-full z-50 bg-[#0b1326] border-b border-white/10 shadow-sm transition-all duration-300">
     <div class="flex justify-between items-center h-20 px-margin-mobile md:px-stack-lg max-w-container-max mx-auto w-full">
       <!-- Brand -->
-      <router-link to="/" class="font-headline-md text-headline-md font-bold text-primary active:scale-95 transition-transform hover:opacity-90 duration-300 rounded px-2 -ml-2">
+      <router-link to="/" class="font-logo text-3xl md:text-4xl font-bold text-primary active:scale-95 transition-transform hover:opacity-90 duration-300 rounded px-2 -ml-2">
         nsurget
       </router-link>
 

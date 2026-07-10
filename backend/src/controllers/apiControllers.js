@@ -1,4 +1,4 @@
-import { Project, Education, Tag } from '../models/index.js';
+import { Project, Education, Tag, Hobby } from '../models/index.js';
 
 // Retrieve all projects with their tags and associated education
 export const getProjects = async (req, res) => {
@@ -116,6 +116,18 @@ export const getTags = async (req, res) => {
       ],
     });
     res.json(tags);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Retrieve all hobbies
+export const getHobbies = async (req, res) => {
+  try {
+    const hobbies = await Hobby.findAll({
+      order: [['id', 'ASC']],
+    });
+    res.json(hobbies);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { sequelize, Tag, Project, Education } from './models/index.js';
+import { sequelize, Tag, Project, Education, Hobby } from './models/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,12 +19,15 @@ async function runSeed() {
   
   let educationSection = '';
   let projectsSection = '';
+  let hobbiesSection = '';
   
   for (const sec of sections) {
     if (sec.startsWith('EDUCATION')) {
       educationSection = sec;
     } else if (sec.startsWith('PROJECTS')) {
       projectsSection = sec;
+    } else if (sec.startsWith('HOBBIES')) {
+      hobbiesSection = sec;
     }
   }
 
@@ -130,10 +133,6 @@ async function runSeed() {
   eduTagsMap.forEach(tags => tags.forEach(t => allTagNames.add(t)));
   projTagsMap.forEach(tags => tags.forEach(t => allTagNames.add(t)));
   
-  // Include standard fallback tag names requested in the prompt
-  const defaultTags = ['HTML', 'JS', 'Vue', 'React', 'Bootstrap', 'SCSS', 'Java', 'Scrum Master', 'Spring Boot', 'PHP', 'WordPress', 'WooCommerce', 'Scrum', 'Agilité'];
-  defaultTags.forEach(t => allTagNames.add(t));
-  
   const createdTags = {};
   for (const name of allTagNames) {
     const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -193,29 +192,33 @@ async function runSeed() {
     }
   }
 
-  // 7. Inject specific JAVA & Scrum project for Human Booster POEC (EDU-HB-JAVA)
-  const javaProjId = 'PROJ-JAVA-HB';
-  let javaProj = await Project.findByPk(javaProjId);
-  if (!javaProj) {
-    javaProj = await Project.create({
-      id: javaProjId,
-      title: 'Projet JAVA & Scrum',
-      description: 'Développement d’une application de gestion robuste en Java SE / Spring Boot dans le cadre de la formation intensive POEC. Gestion d’équipe sous le rôle de Scrum Master certifié PSM I, avec application des cérémonies agiles et sprints de livraison.',
-      url: null,
-      github_url: 'https://github.com/nsurget',
-      educationId: 'EDU-HB-JAVA'
-    });
-    
-    // Associate tags
-    const tagsToAdd = ['Java', 'Spring Boot', 'Scrum', 'Agilité', 'Scrum Master'];
-    for (const tName of tagsToAdd) {
-      const tagInst = createdTags[tName.toLowerCase()];
-      if (tagInst) {
-        await javaProj.addTag(tagInst);
+  // 7. Parse and Create Hobby entities
+  const hobbiesData = [];
+  if (hobbiesSection) {
+    const lines = hobbiesSection.split('\n');
+    for (const line of lines) {
+      const cleanLine = line.trim();
+      if (cleanLine.startsWith('- **')) {
+        const match = cleanLine.match(/-\s*\*\*(.+?)\s*:\*\*(.+)/);
+        if (match) {
+          const name = match[1].trim();
+          const description = match[2].trim();
+          const slug = name.toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/(^-|-$)/g, '');
+          const id = `HOBBY-${slug.toUpperCase()}`;
+          hobbiesData.push({ id, name, description });
+        }
       }
     }
-    console.log('Linked Java & Scrum Project to Human Booster POEC.');
   }
+
+  for (const hobby of hobbiesData) {
+    await Hobby.create(hobby);
+  }
+  console.log(`Successfully created ${hobbiesData.length} Hobby entities.`);
 
   console.log('Seeding process completed successfully!');
   process.exit(0);

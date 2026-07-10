@@ -3,7 +3,7 @@
     <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-stack-lg max-w-container-max mx-auto gap-stack-md md:gap-0">
       <!-- Brand & Copyright -->
       <div class="flex flex-col items-center md:items-start gap-2">
-        <span class="font-headline-md text-headline-md text-on-surface">
+        <span class="font-logo text-3xl font-bold text-primary">
           nsurget
         </span>
         <span class="font-label-caps text-label-caps text-on-surface-variant">

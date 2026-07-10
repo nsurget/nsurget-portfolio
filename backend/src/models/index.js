@@ -71,6 +71,24 @@ export const Education = sequelize.define('Education', {
   timestamps: true,
 });
 
+// Define Hobby model
+export const Hobby = sequelize.define('Hobby', {
+  id: {
+    type: DataTypes.STRING,
+    primaryKey: true,
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  description: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+}, {
+  timestamps: true,
+});
+
 // Many-to-Many: Project <-> Tag
 Project.belongsToMany(Tag, { through: 'ProjectTags', foreignKey: 'projectId', otherKey: 'tagId' });
 Tag.belongsToMany(Project, { through: 'ProjectTags', foreignKey: 'tagId', otherKey: 'projectId' });

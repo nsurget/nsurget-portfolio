@@ -78,7 +78,8 @@ export default {
         "headline-md": ["Geist", "sans-serif"],
         "label-caps": ["JetBrains Mono", "monospace"],
         "display-lg-mobile": ["Geist", "sans-serif"],
-        "display-lg": ["Geist", "sans-serif"]
+        "display-lg": ["Geist", "sans-serif"],
+        "logo": ["Gugi", "sans-serif"]
       },
       fontSize: {
         "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],

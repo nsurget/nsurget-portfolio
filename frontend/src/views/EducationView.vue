@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import PageHeader from '../components/PageHeader.vue';
 
 const educations = ref([]);
 const isLoading = ref(true);
@@ -17,16 +18,12 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex-grow pt-32 pb-stack-lg px-margin-mobile md:px-stack-lg max-w-container-max mx-auto w-full z-10 relative">
+  <div class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-stack-lg pt-32 pb-stack-lg z-10 relative">
     <!-- Header -->
-    <header class="mb-stack-lg animate-fade-in-up">
-      <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-        Expertise &amp; Parcours
-      </h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant mt-4 max-w-2xl">
-        Mon parcours académique, mes certifications technologiques et ma boîte à outils technique pour concevoir des applications web de pointe.
-      </p>
-    </header>
+    <PageHeader 
+      title="Mon <strong>Parcours</strong>" 
+      description="Mon parcours académique, mes certifications technologiques et ma boîte à outils technique pour concevoir des applications web de pointe." 
+    />
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
       <!-- Timeline Column (Mes Formations) (5 cols) -->

@@ -1,9 +1,9 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
+import PageHeader from '../components/PageHeader.vue';
 
 const projects = ref([]);
 const tags = ref([]);
-const selectedTagId = ref(null);
 const isLoading = ref(true);
 
 onMounted(async () => {
@@ -31,60 +31,140 @@ const getGridSpan = (index) => {
 // Return project placeholder cover image
 const getProjectImage = (id) => {
   const images = {
+    'PROJ-GEN-PLUGIN': 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&w=800&q=80',
+    'PROJ-GEN-LEGAL': 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80',
+    'PROJ-ERP-CONNECT': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
     'PROJ-ASHIKA': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
     'PROJ-COLIBRI': 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=800&q=80',
+    'PROJ-HOKALO': 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80',
+    'PROJ-GLOBALU': 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    'PROJ-MASTER-GLOQUAL': 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
+    'PROJ-AUREP': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80',
     'PROJ-KASA': 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
     'PROJ-ABRICOT': 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
     'PROJ-SPORTSEE': 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80',
     'PROJ-TOMTROC': 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+    'PROJ-NSURGET-FR': 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80',
     'PROJ-JAVA-HB': 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80'
   };
   return images[id] || 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80';
 };
 
-// Filtered projects
-const filteredProjects = computed(() => {
-  if (!selectedTagId.value) return projects.value;
-  return projects.value.filter(proj => 
-    proj.Tags.some(tag => tag.id === selectedTagId.value)
+const selectedCategory = ref(null);
+const selectedTechTagId = ref(null);
+
+const categoryTagNames = ['pro', 'formation', 'perso'];
+
+const categoryTags = computed(() => {
+  return tags.value.filter(tag => 
+    categoryTagNames.includes(tag.name.toLowerCase()) && 
+    tag.Projects && tag.Projects.length > 0
   );
 });
 
-const selectTag = (tagId) => {
-  selectedTagId.value = selectedTagId.value === tagId ? null : tagId;
-};
+const technologyTags = computed(() => {
+  return tags.value.filter(tag => 
+    !categoryTagNames.includes(tag.name.toLowerCase()) && 
+    tag.Projects && tag.Projects.length > 0
+  );
+});
+
+// Filtered projects by category AND technology
+const filteredProjects = computed(() => {
+  let result = projects.value;
+  
+  if (selectedCategory.value) {
+    result = result.filter(proj => 
+      proj.Tags.some(tag => tag.id === selectedCategory.value)
+    );
+  }
+  
+  if (selectedTechTagId.value) {
+    result = result.filter(proj => 
+      proj.Tags.some(tag => tag.id === selectedTechTagId.value)
+    );
+  }
+  
+  const featuredOrder = [
+    'PROJ-HOKALO',
+    'PROJ-GLOBALU',
+    'PROJ-ABRICOT',
+    'PROJ-AUREP',
+    'PROJ-MASTER-GLOQUAL'
+  ];
+  
+  return [...result].sort((a, b) => {
+    const aIdx = featuredOrder.indexOf(a.id);
+    const bIdx = featuredOrder.indexOf(b.id);
+    if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx;
+    if (aIdx !== -1) return -1;
+    if (bIdx !== -1) return 1;
+    return 0;
+  });
+});
 </script>
 
 <template>
-  <div class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-stack-lg py-stack-lg flex flex-col gap-stack-lg pt-28">
+  <div class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-stack-lg pt-32 pb-stack-lg flex flex-col gap-stack-lg relative">
     <!-- Header -->
-    <header class="flex flex-col gap-4">
-      <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-        Mes Réalisations
-      </h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-        Une sélection de projets e-commerce, d'applications web interactives et de travaux académiques issus de mes expériences chez Coqpit et de mes formations.
-      </p>
-    </header>
+    <PageHeader 
+      title="Mes <strong>Réalisations</strong>" 
+      description="Une sélection de projets e-commerce, d'applications web interactives et de travaux académiques issus de mes expériences chez Coqpit et de mes formations." 
+    />
 
-    <!-- Tag Filter Bar -->
-    <div class="flex flex-wrap gap-2 py-2">
-      <button 
-        @click="selectedTagId = null"
-        class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border transition-all duration-300 active:scale-95"
-        :class="!selectedTagId ? 'bg-primary text-on-primary border-primary' : 'bg-surface-container/40 border-white/10 text-on-surface-variant hover:text-primary'"
-      >
-        Tous
-      </button>
-      <button 
-        v-for="tag in tags" 
-        :key="tag.id"
-        @click="selectTag(tag.id)"
-        class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border transition-all duration-300 active:scale-95 flex items-center gap-2"
-        :class="selectedTagId === tag.id ? 'bg-primary text-on-primary border-primary' : 'bg-surface-container/40 border-white/10 text-on-surface-variant hover:text-primary'"
-      >
-        {{ tag.name }}
-      </button>
+    <!-- Filters Panel -->
+    <div class="flex flex-col gap-6 p-6 rounded-2xl bg-surface-container/20 border border-white/5">
+      <!-- Categories Filter Bar -->
+      <div class="flex flex-col gap-3">
+        <span class="font-label-caps text-label-caps text-on-surface-variant uppercase text-xs tracking-widest flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px] text-primary">folder_open</span>
+          Catégorie de projet
+        </span>
+        <div class="flex flex-wrap gap-2">
+          <button 
+            @click="selectedCategory = null"
+            class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border transition-all duration-300 active:scale-95"
+            :class="!selectedCategory ? 'bg-primary text-on-primary border-primary' : 'bg-surface-container/40 border-white/10 text-on-surface-variant hover:text-primary'"
+          >
+            Tous
+          </button>
+          <button 
+            v-for="tag in categoryTags" 
+            :key="tag.id"
+            @click="selectedCategory = selectedCategory === tag.id ? null : tag.id"
+            class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border transition-all duration-300 active:scale-95"
+            :class="selectedCategory === tag.id ? 'bg-primary text-on-primary border-primary' : 'bg-surface-container/40 border-white/10 text-on-surface-variant hover:text-primary'"
+          >
+            {{ tag.name }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Technology Filter Bar -->
+      <div class="flex flex-col gap-3 pt-4 border-t border-white/5">
+        <span class="font-label-caps text-label-caps text-on-surface-variant uppercase text-xs tracking-widest flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px] text-secondary">terminal</span>
+          Technologies
+        </span>
+        <div class="flex flex-wrap gap-2">
+          <button 
+            @click="selectedTechTagId = null"
+            class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border transition-all duration-300 active:scale-95"
+            :class="!selectedTechTagId ? 'bg-secondary text-on-secondary border-secondary' : 'bg-surface-container/40 border-white/10 text-on-surface-variant hover:text-secondary'"
+          >
+            Toutes
+          </button>
+          <button 
+            v-for="tag in technologyTags" 
+            :key="tag.id"
+            @click="selectedTechTagId = selectedTechTagId === tag.id ? null : tag.id"
+            class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border transition-all duration-300 active:scale-95"
+            :class="selectedTechTagId === tag.id ? 'bg-secondary text-on-secondary border-secondary' : 'bg-surface-container/40 border-white/10 text-on-surface-variant hover:text-secondary'"
+          >
+            {{ tag.name }}
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Loading State -->
@@ -114,6 +194,14 @@ const selectTag = (tagId) => {
               draggable="false"
               :src="getProjectImage(proj.id)"
             />
+            <!-- Coup de cœur Badge -->
+            <div 
+              v-if="['PROJ-HOKALO', 'PROJ-GLOBALU', 'PROJ-ABRICOT', 'PROJ-AUREP', 'PROJ-MASTER-GLOQUAL'].includes(proj.id)"
+              class="absolute top-3 left-3 bg-[#0b1326]/80 backdrop-blur border border-white/10 px-2.5 py-1 rounded-full flex items-center gap-1.5 z-10"
+            >
+              <span class="material-symbols-outlined text-[12px] text-[#ff5c5c]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+              <span class="font-code-sm text-[9px] text-on-surface-variant uppercase tracking-wider">Coup de cœur</span>
+            </div>
           </div>
 
           <!-- Info content -->
