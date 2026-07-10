@@ -68,7 +68,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 ### Développeur Web (Alternance puis CDI)
 - **Entreprise :** COQPIT - Clermont-Ferrand (2024 - Présent)
 - **Missions :** Développement de sites web dont e-commerce. Intégration et connexion avec des ERP.
-- **Tags associés :** PHP, WordPress, WooCommerce, API, CRM, ERP, CRON, JavaScript, Tailwind CSS
+- **Tags associés :** PHP, WordPress, WooCommerce, API, CRM, ERP/CRM, CRON, JavaScript, Tailwind CSS
 - **Projets liés :** PROJ-GEN-PLUGIN, PROJ-GEN-LEGAL, PROJ-ERP-CONNECT, PROJ-ASHIKA, PROJ-HOKALO, PROJ-GLOBALU, PROJ-MASTER-GLOQUAL, PROJ-AUREP
 
 ### Concepteur Fabricant d'Éclairage Public (Stage)
@@ -87,24 +87,24 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 
 #### [ID: PROJ-GEN-PLUGIN] Générateur de base de plugin
 - **Description :** Création d’un outil interne en JavaScript pour automatiser le renommage et la génération de structures de plugins sur mesure dans une trentaine de fichiers. Permet de sécuriser le lancement d'un projet et de réduire le temps de configuration initial (gain de 15 minutes par projet) tout en simplifiant la prise en main pour les nouveaux développeurs.
-- **Tags :** Pro, JavaScript, Node.js, Automatisation, Outil interne
+- **Tags :** Pro, JavaScript, Node.js, Automatisation
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-GEN-LEGAL] Générateur de mentions légales
 - **Description :** Outil interne de génération de mentions légales avec des templates adaptés et validés légalement, permettant de mettre à jour de façon rapide les éléments répétitifs et d'optimiser le démarrage des projets pour l'ensemble de l'équipe de développement.
-- **Tags :** Pro, JavaScript, Outil interne, Optimisation
+- **Tags :** Pro, JavaScript, Optimisation
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-ERP-CONNECT] Detercentre Cleor & Sites Connectés
 - **Description :** Connexion custom de trois sites e-commerce sur des ERP sur mesure existants via API. Optimisation d'un CRON serveur et de la synchronisation de plus de 3500 produits avec des grilles de prix complexes par utilisateur (table multirelationnelle). Optimisation des performances et création d'un système de pré-panier soumis à la validation d'un compte parent (commandes enfants validées par la maison mère).
 - **Lien :** [detercentre-cleor.com](https://detercentre-cleor.com)
-- **Tags :** Pro, PHP, WooCommerce, WordPress, API, CRON, B2B, ERP
+- **Tags :** Pro, PHP, WooCommerce, WordPress, API, CRON, ERP/CRM
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-ASHIKA] Ashika France
 - **Description :** Reprise d'un site e-commerce en l'état pour maintenance et optimisation avant refonte complète sur-mesure connectée via des fichiers d'export CSV de l'ERP Divalto. Architecture conçue pour anticiper un futur passage vers des services web (API) pour la gestion de plus de 11 000 pièces automobiles.
 - **Lien :** [ashika.fr](https://ashika.fr)
-- **Tags :** Pro, PHP, WooCommerce, WordPress, ERP, CSV, Synchronisation de données, Claude Code, Antigravity / Gemini
+- **Tags :** Pro, PHP, WooCommerce, WordPress, ERP/CRM, Claude Code, Antigravity / Gemini
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-HOKALO] H'okalo
@@ -115,7 +115,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 #### [ID: PROJ-GLOBALU] Globalu
 - **Description :** Assistance technique et revue de code sur des points bloquants (optimisation des performances et conflits Cloudflare/AJAX). Conception et intégration d'une visionneuse 3D interactive pour les produits via la bibliothèque Google `<model-viewer>`. Génération et texturage des fichiers 3D (.glb) en convertissant des modèles existants via l'extrusion de fichiers vectoriels SVG (technique issue de ma formation BTS CPI).
 - **Lien :** [globalu.fr](https://globalu.fr)
-- **Tags :** Pro, JavaScript, 3D Rendering, Model-Viewer, SVG, Cloudflare, AJAX
+- **Tags :** Pro, JavaScript, 3D Rendering, Model-Viewer, SVG, AJAX
 - **Lié à l'expérience :** COQPIT
 
 #### [ID: PROJ-MASTER-GLOQUAL] Master Gloqual
@@ -127,7 +127,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 #### [ID: PROJ-AUREP] Aurep
 - **Description :** Reprise de projet et développement d'un nouveau tunnel de commande spécifique connecté à l'API du CRM Dendreo avec webhooks. Création d'une plateforme de formation e-learning avec vidéos à visionnage obligatoire, module d'évaluation (quiz builder avec calcul de score), formulaires de satisfaction synchronisés avec le CRM et génération automatique d'attestations.
 - **Lien :** [aurep.com](https://aurep.com)
-- **Tags :** Pro, PHP, WordPress, E-learning, API, Webhooks, CRM, Dendreo, Antigravity / Gemini
+- **Tags :** Pro, PHP, WordPress, API, Webhooks, CRM, Dendreo, Antigravity / Gemini
 - **Lié à l'expérience :** COQPIT
 
 ### Academic Projects (OpenClassrooms)
@@ -148,7 +148,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 #### [ID: PROJ-SPORTSEE] SportSee
 - **Description :** Dashboard de suivi d'activité physique en React. Visualisation de données d'activité et de performance (Recharts), architecture découplée avec le pattern Adapter pour la normalisation des données de l'API. Hook personnalisés pour le traitement des statistiques.
 - **GitHub :** [p6-react-sportsee](https://github.com/nsurget/p6-react-sportsee)
-- **Tags :** Formation, React, Recharts, React Router, Custom Hooks, Data Visualization, OpenClassrooms
+- **Tags :** Formation, React, Recharts, React Router, Data Visualization, OpenClassrooms
 - **Lié à la formation :** EDU-OC-FS
 
 #### [ID: PROJ-TOMTROC] TomTroc
@@ -162,7 +162,7 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 #### [ID: PROJ-NSURGET-FR] nsurget.fr
 - **Description :** Conception et développement de mon portfolio personnel et CV numérique. Utilisation d'une architecture découplée avec un chargement dynamique des données de formation, d'expériences et de loisirs depuis le fichier cv.md. Design soigné et moderne sous forme de Bento Grid, intégration de polices haut de gamme (Gugi, Geist, Inter) et animations fluides.
 - **GitHub :** [nsurget-portfolio](https://github.com/nsurget)
-- **Tags :** Perso, Vue.js, Express, SQLite, Sequelize, Tailwind CSS, Gfont Gugi, Antigravity / Gemini
+- **Tags :** Perso, Vue.js, Express, SQLite, Sequelize, Tailwind CSS, Antigravity / Gemini
 
 ---
 

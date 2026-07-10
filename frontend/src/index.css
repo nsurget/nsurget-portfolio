@@ -24,16 +24,12 @@
   background: rgba(23, 31, 51, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  will-change: transform, border-color, box-shadow;
+  will-change: border-color, box-shadow;
 }
 
 .glass-card:hover {
   border-color: rgba(105, 220, 164, 0.25);
   box-shadow: 0 0 25px rgba(105, 220, 164, 0.08);
-  transform: translate3d(0, -2px, 0);
 }
 
 .glow-hover:hover {

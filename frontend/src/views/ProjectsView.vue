@@ -69,6 +69,26 @@ const technologyTags = computed(() => {
   );
 });
 
+const showAllTechTags = ref(false);
+
+const displayedTechnologyTags = computed(() => {
+  if (showAllTechTags.value) {
+    return technologyTags.value;
+  }
+  // Show only first 5 tags, but always keep the active selected tag visible
+  const firstFive = technologyTags.value.slice(0, 5);
+  if (selectedTechTagId.value) {
+    const isSelectedInFirstFive = firstFive.some(t => t.id === selectedTechTagId.value);
+    if (!isSelectedInFirstFive) {
+      const selectedTag = technologyTags.value.find(t => t.id === selectedTechTagId.value);
+      if (selectedTag) {
+        firstFive.push(selectedTag);
+      }
+    }
+  }
+  return firstFive;
+});
+
 // Filtered projects by category AND technology
 const filteredProjects = computed(() => {
   let result = projects.value;
@@ -155,13 +175,24 @@ const filteredProjects = computed(() => {
             Toutes
           </button>
           <button 
-            v-for="tag in technologyTags" 
+            v-for="tag in displayedTechnologyTags" 
             :key="tag.id"
             @click="selectedTechTagId = selectedTechTagId === tag.id ? null : tag.id"
             class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border transition-all duration-300 active:scale-95"
             :class="selectedTechTagId === tag.id ? 'bg-secondary text-on-secondary border-secondary' : 'bg-surface-container/40 border-white/10 text-on-surface-variant hover:text-secondary'"
           >
             {{ tag.name }}
+          </button>
+          
+          <button 
+            v-if="technologyTags.length > 5"
+            @click="showAllTechTags = !showAllTechTags"
+            class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border border-dashed border-secondary/30 bg-transparent text-secondary hover:text-on-secondary hover:bg-secondary/10 hover:border-secondary transition-all duration-300 active:scale-95 flex items-center gap-1"
+          >
+            <span>{{ showAllTechTags ? 'Voir moins' : 'Voir plus' }}</span>
+            <span class="material-symbols-outlined text-[16px] transition-transform duration-300" :class="showAllTechTags ? 'rotate-180' : ''">
+              keyboard_arrow_down
+            </span>
           </button>
         </div>
       </div>
