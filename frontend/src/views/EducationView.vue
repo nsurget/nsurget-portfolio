@@ -81,7 +81,7 @@ onMounted(async () => {
                 <div 
                   class="inline-flex items-center gap-1 text-xs font-label-caps text-primary group-hover:text-primary-fixed transition-colors"
                 >
-                  Détails & Projets liés
+                  {{ edu.projects && edu.projects.length > 0 ? 'Détails & Projets liés' : 'Détails' }}
                   <span class="material-symbols-outlined text-xs">arrow_forward</span>
                 </div>
               </div>
@@ -105,22 +105,22 @@ onMounted(async () => {
               <h3 class="font-body-lg text-body-lg font-semibold text-white">Compétences Techniques</h3>
             </div>
             
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div class="bg-surface-container-low border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:border-tertiary/20 transition-all duration-300 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-tertiary">storefront</span>
+                <span class="font-code-sm text-code-sm text-white text-center">E-commerce</span>
+              </div>
               <div class="bg-surface-container-low border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:border-secondary/20 transition-all duration-300 cursor-default">
                 <span class="material-symbols-outlined text-3xl text-secondary">data_object</span>
                 <span class="font-code-sm text-code-sm text-white">React</span>
-              </div>
-              <div class="bg-surface-container-low border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:border-primary/20 transition-all duration-300 cursor-default">
-                <span class="material-symbols-outlined text-3xl text-primary">view_in_ar</span>
-                <span class="font-code-sm text-code-sm text-white">Vue.js</span>
               </div>
               <div class="bg-surface-container-low border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:border-yellow-400/20 transition-all duration-300 cursor-default">
                 <span class="material-symbols-outlined text-3xl text-yellow-400">javascript</span>
                 <span class="font-code-sm text-code-sm text-white">JavaScript</span>
               </div>
-              <div class="bg-surface-container-low border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:border-tertiary/20 transition-all duration-300 cursor-default">
-                <span class="material-symbols-outlined text-3xl text-tertiary">storefront</span>
-                <span class="font-code-sm text-code-sm text-white text-center">E-commerce</span>
+              <div class="bg-surface-container-low border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:border-primary/20 transition-all duration-300 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-primary">view_in_ar</span>
+                <span class="font-code-sm text-code-sm text-white">Vue.js</span>
               </div>
             </div>
             
@@ -130,8 +130,14 @@ onMounted(async () => {
               <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">WordPress</span>
               <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">WooCommerce</span>
               <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">Tailwind CSS</span>
-              <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">Git</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">Next.js</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">Node.js</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">Java</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">Spring Boot</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">ERP/CRM</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">SQLite</span>
               <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">REST APIs</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">Git</span>
               <span class="px-3 py-1 bg-primary/10 text-primary font-code-sm text-code-sm rounded-full border border-primary/20">Figma</span>
             </div>
           </div>

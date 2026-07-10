@@ -24,9 +24,10 @@ const scrollToAbout = () => {
 const featuredOrder = [
   'PROJ-HOKALO',
   'PROJ-GLOBALU',
+  'PROJ-NSURGET-FR',
   'PROJ-ABRICOT',
   'PROJ-AUREP',
-  'PROJ-MASTER-GLOQUAL'
+  'PROJ-MASTER-GLOQUAL',
 ];
 
 onMounted(async () => {
@@ -47,7 +48,7 @@ onMounted(async () => {
 
 const getProjectImage = (id) => {
   const images = {
-    'PROJ-GEN-PLUGIN': 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&w=800&q=80',
+    'PROJ-GEN-PLUGIN': 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=800&q=80',
     'PROJ-GEN-LEGAL': 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80',
     'PROJ-ERP-CONNECT': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
     'PROJ-ASHIKA': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',

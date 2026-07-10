@@ -31,7 +31,7 @@ const getGridSpan = (index) => {
 // Return project placeholder cover image
 const getProjectImage = (id) => {
   const images = {
-    'PROJ-GEN-PLUGIN': 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&w=800&q=80',
+    'PROJ-GEN-PLUGIN': 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=800&q=80',
     'PROJ-GEN-LEGAL': 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80',
     'PROJ-ERP-CONNECT': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
     'PROJ-ASHIKA': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
@@ -52,6 +52,15 @@ const getProjectImage = (id) => {
 
 const selectedCategory = ref(null);
 const selectedTechTagId = ref(null);
+
+const featuredOrder = [
+  'PROJ-HOKALO',
+  'PROJ-GLOBALU',
+  'PROJ-NSURGET-FR',
+  'PROJ-ABRICOT',
+  'PROJ-AUREP',
+  'PROJ-MASTER-GLOQUAL'
+];
 
 const categoryTagNames = ['pro', 'formation', 'perso'];
 
@@ -104,14 +113,6 @@ const filteredProjects = computed(() => {
       proj.Tags.some(tag => tag.id === selectedTechTagId.value)
     );
   }
-  
-  const featuredOrder = [
-    'PROJ-HOKALO',
-    'PROJ-GLOBALU',
-    'PROJ-ABRICOT',
-    'PROJ-AUREP',
-    'PROJ-MASTER-GLOQUAL'
-  ];
   
   return [...result].sort((a, b) => {
     const aIdx = featuredOrder.indexOf(a.id);
@@ -187,7 +188,7 @@ const filteredProjects = computed(() => {
           <button 
             v-if="technologyTags.length > 5"
             @click="showAllTechTags = !showAllTechTags"
-            class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border border-dashed border-secondary/30 bg-transparent text-secondary hover:text-on-secondary hover:bg-secondary/10 hover:border-secondary transition-all duration-300 active:scale-95 flex items-center gap-1"
+            class="font-code-sm text-code-sm px-4 py-1.5 rounded-full border border-dashed border-secondary/30 bg-transparent text-secondary hover:text-white hover:bg-secondary/20 hover:border-secondary transition-all duration-300 active:scale-95 flex items-center gap-1"
           >
             <span>{{ showAllTechTags ? 'Voir moins' : 'Voir plus' }}</span>
             <span class="material-symbols-outlined text-[16px] transition-transform duration-300" :class="showAllTechTags ? 'rotate-180' : ''">
@@ -227,7 +228,7 @@ const filteredProjects = computed(() => {
             />
             <!-- Coup de cœur Badge -->
             <div 
-              v-if="['PROJ-HOKALO', 'PROJ-GLOBALU', 'PROJ-ABRICOT', 'PROJ-AUREP', 'PROJ-MASTER-GLOQUAL'].includes(proj.id)"
+              v-if="featuredOrder.includes(proj.id)"
               class="absolute top-3 left-3 bg-[#0b1326]/80 backdrop-blur border border-white/10 px-2.5 py-1 rounded-full flex items-center gap-1.5 z-10"
             >
               <span class="material-symbols-outlined text-[12px] text-[#ff5c5c]" style="font-variation-settings: 'FILL' 1;">favorite</span>

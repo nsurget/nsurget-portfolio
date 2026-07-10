@@ -25,7 +25,7 @@ onMounted(async () => {
 
 const getProjectImage = (id) => {
   const images = {
-    'PROJ-GEN-PLUGIN': 'https://images.unsplash.com/photo-1618401471353-b98aedd07871?auto=format&fit=crop&w=800&q=80',
+    'PROJ-GEN-PLUGIN': 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=800&q=80',
     'PROJ-GEN-LEGAL': 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80',
     'PROJ-ERP-CONNECT': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
     'PROJ-ASHIKA': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
@@ -90,13 +90,13 @@ const goBack = () => {
       </div>
 
       <!-- Projects Section -->
-      <div class="flex flex-col gap-6">
+      <div v-if="education.projects && education.projects.length > 0" class="flex flex-col gap-6">
         <h2 class="font-headline-md text-headline-md text-2xl text-white flex items-center gap-3">
           <span class="material-symbols-outlined text-primary">terminal</span>
           Projets réalisés durant cette formation
         </h2>
 
-        <div v-if="education.projects && education.projects.length > 0" class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
           <router-link 
             v-for="proj in education.projects" 
             :key="proj.id"
@@ -142,11 +142,6 @@ const goBack = () => {
               </div>
             </div>
           </router-link>
-        </div>
-
-        <div v-else class="py-16 text-center glass-card rounded-xl border border-dashed border-white/10">
-          <span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">work_off</span>
-          <p class="font-body-lg text-body-lg text-on-surface-variant">Aucun projet répertorié pour cette formation.</p>
         </div>
       </div>
     </div>

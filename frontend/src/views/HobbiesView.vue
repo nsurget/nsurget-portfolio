@@ -39,7 +39,7 @@ const getHobbyAesthetics = (hobby, index) => {
     },
     'HOBBY-SPORTS': {
       icon: 'hiking',
-      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1700488784117-9cd39017ccd2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       span: 'col-span-12',
       flexClass: 'flex flex-col md:flex-row-reverse',
       imageContainerClass: 'w-full md:w-1/2 h-64 md:h-auto min-h-[16rem]',
@@ -78,7 +78,7 @@ const getHobbyAesthetics = (hobby, index) => {
     <!-- Header Section -->
     <PageHeader 
       title="Au-delà de <strong>l'IDE</strong>." 
-      description="Explorer l'analogique et la créativité. C'est ici que je déconnecte pour me ressourcer, trouvant l'inspiration dans les objectifs, le café et les interrupteurs mécaniques." 
+      description="Découvrez mes passions et activités en dehors du développement web. C'est ici que je me ressource et trouve de nouvelles inspirations." 
     />
 
     <!-- Loading State -->
