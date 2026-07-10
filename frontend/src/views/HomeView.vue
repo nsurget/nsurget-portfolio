@@ -74,7 +74,7 @@ const getProjectImage = (id) => {
     <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background"></div>
       <div
-        class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-stack-lg text-center flex flex-col items-center gap-stack-md">
+        class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-stack-lg text-center flex flex-col items-center gap-stack-md w-full">
         <!-- Personal Info Section -->
         <div class="flex flex-col items-center gap-2 mb-2">
           <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Portfolio
@@ -83,13 +83,12 @@ const getProjectImage = (id) => {
         </div>
 
         <h1
-          class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg max-w-4xl text-on-surface drop-shadow-2xl">
+          class="font-display-lg-mobile text-3xl sm:text-4xl md:text-display-lg max-w-4xl text-on-surface drop-shadow-2xl px-2">
           Développeur Web <br class="hidden md:block" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Spécialisé Front-end
-            <br>& E-commerce</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Spécialisé Front-end <br class="hidden sm:block" />& E-commerce</span>
         </h1>
 
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4 leading-relaxed">
+        <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-2xl mt-4 leading-relaxed px-4">
           Développeur chez <span class="text-primary font-medium">Coqpit</span>, je poursuis actuellement une formation
           fullstack<br class="hidden sm:block" /> (en alternance) pour monter en compétences sur les technologies
           modernes <span class="text-secondary font-medium">Front-end</span> (React, Next.js ou Vue.js).<br
@@ -97,14 +96,14 @@ const getProjectImage = (id) => {
           concevoir des sites et des applications web fluides, optimisés et adaptés.
         </p>
 
-        <div class="mt-stack-md flex flex-col sm:flex-row gap-gutter">
+        <div class="mt-stack-md flex flex-col sm:flex-row gap-gutter w-full sm:w-auto px-6 sm:px-0">
           <button @click="navigateToProjects"
-            class="bg-primary text-on-primary font-body-md text-body-md font-medium px-8 py-4 rounded-lg hover:shadow-[0_0_20px_rgba(105,220,164,0.3)] transition-all duration-300 active:scale-95 flex items-center justify-center gap-2">
+            class="bg-primary text-on-primary font-body-md text-body-md font-medium px-8 py-4 rounded-lg hover:shadow-[0_0_20px_rgba(105,220,164,0.3)] transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 w-full sm:w-auto">
             Voir mes projets
             <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
           </button>
           <button @click="navigateToEducation"
-            class="bg-surface-container/60 border border-white/10 text-on-surface font-body-md text-body-md font-medium px-8 py-4 rounded-lg hover:bg-surface-container/80 transition-all duration-300 active:scale-95">
+            class="bg-surface-container/60 border border-white/10 text-on-surface font-body-md text-body-md font-medium px-8 py-4 rounded-lg hover:bg-surface-container/80 transition-all duration-300 active:scale-95 w-full sm:w-auto">
             Mon parcours
           </button>
         </div>
@@ -112,7 +111,7 @@ const getProjectImage = (id) => {
 
       <!-- Scroll Indicator -->
       <div @click="scrollToAbout"
-        class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 cursor-pointer animate-bounce text-on-surface-variant/50 hover:text-primary transition-colors duration-300 z-20">
+        class="absolute bottom-4 left-0 right-0 mx-auto w-fit flex flex-col items-center gap-1 cursor-pointer animate-bounce text-on-surface-variant/50 hover:text-primary transition-colors duration-300 z-20">
         <span class="font-code-sm text-[9px] uppercase tracking-widest">Découvrir</span>
         <span class="material-symbols-outlined text-[20px]">keyboard_double_arrow_down</span>
       </div>
@@ -132,7 +131,7 @@ const getProjectImage = (id) => {
       <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-stretch">
         <!-- Left Content (50/50 on md, 60/40 on lg) -->
         <div class="md:col-span-6 lg:col-span-7 relative z-10">
-          <div class="glass-card p-stack-lg rounded-xl shadow-lg relative overflow-hidden group h-full">
+          <div class="glass-card p-4 sm:p-6 md:p-stack-lg rounded-xl shadow-lg relative overflow-hidden group h-full">
             <!-- Top glow edge -->
             <div
               class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700">
@@ -176,7 +175,7 @@ const getProjectImage = (id) => {
 
             <!-- Floating Code Snippet Card (Inside visual card, slightly cropped) -->
             <div
-              class="absolute bg-[#0b1326]/90 backdrop-blur border border-white/10 p-4 rounded-lg shadow-xl hidden md:block"
+              class="absolute bg-[#0b1326]/90 backdrop-blur border border-white/10 p-3 sm:p-4 rounded-lg shadow-xl"
               style="left: -5px; bottom: -5px;">
               <div class="flex gap-1.5 mb-3">
                 <div class="w-2.5 h-2.5 rounded-full bg-error"></div>
@@ -230,7 +229,7 @@ const getProjectImage = (id) => {
                 cœur</span>
             </div>
           </div>
-          <div class="p-6 flex flex-col justify-between flex-grow gap-4">
+          <div class="p-4 sm:p-6 flex flex-col justify-between flex-grow gap-4">
             <div>
               <h3 class="font-headline-md text-xl text-white group-hover:text-primary transition-colors font-semibold">
                 {{ proj.title }}

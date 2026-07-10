@@ -66,7 +66,7 @@ export default {
         "stack-lg": "48px",
         "stack-md": "24px",
         "container-max": "1280px",
-        "margin-mobile": "20px",
+        "margin-mobile": "19px",
         "stack-sm": "12px",
         "gutter": "24px",
         "base": "4px"

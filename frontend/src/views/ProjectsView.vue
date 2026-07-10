@@ -253,7 +253,7 @@ const filteredProjects = computed(() => {
 
           <!-- Info content -->
           <div 
-            class="p-stack-md flex flex-col justify-between flex-grow gap-4"
+            class="p-4 md:p-stack-md flex flex-col justify-between flex-grow gap-4"
             :class="getGridSpan(index).includes('col-span-8') ? 'md:w-1/2' : ''"
           >
             <div>

@@ -99,7 +99,7 @@ onMounted(async () => {
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mt-6">
           <!-- Hard Skills Panel -->
-          <div class="md:col-span-2 bg-surface-container border border-white/5 rounded-2xl p-8 relative overflow-hidden group">
+          <div class="md:col-span-2 bg-surface-container border border-white/5 rounded-2xl p-4 sm:p-6 md:p-8 relative overflow-hidden group">
             <div class="flex items-center gap-2 mb-6">
               <span class="material-symbols-outlined text-primary">memory</span>
               <h3 class="font-body-lg text-body-lg font-semibold text-white">Compétences Techniques</h3>
@@ -143,7 +143,7 @@ onMounted(async () => {
           </div>
 
           <!-- Soft Skills Panel -->
-          <div class="md:col-span-2 bg-surface-container-low/50 border border-white/5 rounded-2xl p-8 hover:bg-surface-container-low transition-colors duration-300">
+          <div class="md:col-span-2 bg-surface-container-low/50 border border-white/5 rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-surface-container-low transition-colors duration-300">
             <div class="flex items-center gap-2 mb-6">
               <span class="material-symbols-outlined text-secondary">psychology</span>
               <h3 class="font-body-lg text-body-lg font-semibold text-white">Savoir-être &amp; Méthodologie</h3>

@@ -133,10 +133,10 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 ### Academic Projects (OpenClassrooms)
 
 #### [ID: PROJ-ABRICOT] Abricot
-- **Description :** SaaS de gestion de projet pour freelances développé en Next.js (App Router). Tableau de bord visuel de progression des tâches avec priorisation et affectation. Intègre un module d'IA (Gemini API) en local pour découper des objectifs en sous-tâches. Authentification sécurisée via proxy Next.js.
+- **Description :** SaaS de gestion de projet pour freelances développé en Next.js (App Router). Tableau de bord visuel de progression des tâches avec priorisation et affectation. Intègre un module d'IA (Gemini API) en local pour découper des objectifs en sous-tâches. Authentification sécurisée via proxy Next.js. Déploiement automatisé : backend Express sur Render et frontend Next.js sur Vercel.
 - **GitHub :** [dev-abricot-front-p7](https://github.com/nsurget/dev-abricot-front-p7)
 - **Lien :** [dev-abricot-front-p7.app](https://dev-abricot-front-p7.vercel.app)
-- **Tags :** Formation, React, Next.js, TypeScript, JavaScript, Tailwind CSS, Zustand, Front-end, SVG, AJAX, Node.js, Express, API, JWT, SQLite, Architecture MVC, Sécurité, Gemini API, Antigravity / Gemini, Optimisation, SaaS, OpenClassrooms, Git, Accessibilité Web / RGAA
+- **Tags :** Formation, React, Next.js, TypeScript, JavaScript, Tailwind CSS, Zustand, Front-end, SVG, AJAX, Node.js, Express, API, JWT, SQLite, Architecture MVC, Sécurité, Gemini API, Antigravity / Gemini, Optimisation, SaaS, OpenClassrooms, Git, Accessibilité Web / RGAA, Déploiement
 - **Lié à la formation :** EDU-OC-FS
 
 #### [ID: PROJ-KASA] Kasa
@@ -160,9 +160,9 @@ Développeur web chez Coqpit, je poursuis actuellement une formation fullstack (
 ### Personal Projects (Perso)
 
 #### [ID: PROJ-NSURGET-FR] nsurget.fr
-- **Description :** Conception et développement de mon portfolio personnel et CV numérique. Utilisation d'une architecture découplée avec un chargement dynamique des données de formation, d'expériences et de loisirs depuis le fichier cv.md. Design soigné et moderne sous forme de Bento Grid, intégration de polices haut de gamme (Gugi, Geist, Inter) et animations fluides.
+- **Description :** Conception et développement de mon portfolio personnel et CV numérique. Utilisation d'une architecture découplée avec un chargement dynamique des données de formation, d'expériences et de loisirs depuis le fichier cv.md. Design soigné et moderne sous forme de Bento Grid, intégration de polices haut de gamme (Gugi, Geist, Inter) et animations fluides. Déploiement et hébergement Node.js sur Infomaniak.
 - **GitHub :** [nsurget-portfolio](https://github.com/nsurget)
-- **Tags :** Perso, Vue.js, Express, SQLite, Sequelize, Tailwind CSS, Vite, Vue Router, Antigravity / Gemini, JavaScript, API
+- **Tags :** Perso, Vue.js, Express, SQLite, Sequelize, Tailwind CSS, Vite, Vue Router, Antigravity / Gemini, JavaScript, API, Déploiement
 
 ---
 

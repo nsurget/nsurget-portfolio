@@ -87,7 +87,7 @@ const goBack = () => {
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
         <!-- Main Description (8 Cols) -->
         <div class="lg:col-span-8 flex flex-col gap-6">
-          <div class="glass-card rounded-xl p-8 flex flex-col gap-4">
+          <div class="glass-card rounded-xl p-4 sm:p-6 md:p-8 flex flex-col gap-4">
             <h2 class="font-headline-md text-headline-md text-xl text-white">Présentation du Projet</h2>
             <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed whitespace-pre-line">
               {{ project.description }}
@@ -95,7 +95,7 @@ const goBack = () => {
           </div>
 
           <!-- Code Window Visual Accent -->
-          <div class="code-window rounded-xl p-6 overflow-hidden">
+          <div class="code-window rounded-xl p-4 sm:p-6 overflow-hidden">
             <div class="flex gap-2 mb-4">
               <div class="w-3 h-3 rounded-full bg-error/70"></div>
               <div class="w-3 h-3 rounded-full bg-[#f59e0b]/70"></div>
@@ -114,7 +114,7 @@ export default {
 
         <!-- Sidebar Details (4 Cols) -->
         <div class="lg:col-span-4 flex flex-col gap-6">
-          <div class="glass-card rounded-xl p-6 flex flex-col gap-6">
+          <div class="glass-card rounded-xl p-4 sm:p-6 flex flex-col gap-6">
             <h3 class="font-headline-md text-headline-md text-lg text-white">Fiche technique</h3>
             
             <!-- Tags -->
